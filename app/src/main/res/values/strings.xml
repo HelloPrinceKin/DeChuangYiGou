@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DeChuangYiGou</string>
+    <string name="me">我的</string>
+    <string name="order_form">订单</string>
+    <string name="shopping_car">购物车</string>
+    <string name="product">产品分类</string>
+    <string name="title">标题</string>
+</resources>
