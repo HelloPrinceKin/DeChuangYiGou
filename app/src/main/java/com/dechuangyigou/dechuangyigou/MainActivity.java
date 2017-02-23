@@ -18,7 +18,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends BaseActivity implements View.OnClickListener{
 
     private TextView mHome_text;
     private TextView mProduct_text;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setBodyView(R.layout.activity_main);
         //初始化控件
         initView();
 
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     private void initFragment() {
         fragments = new LinkedList<>();
-        HomePagerFragment mHomePager = HomePagerFragment.instance(this);
+        HomePagerFragment mHomePager = new HomePagerFragment();
         ProductFragment mProduct = new ProductFragment();
         ShoppingCarFragment mShopping = new ShoppingCarFragment();
         OrderFormFragment mOrder = new OrderFormFragment();
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             //判断当前的fragment是否被添加过，没有的就添加到事务中
             if(!fragment1.isAdded()){
-                fragmentTransaction.add(R.id.fragment_replace, fragments.get(currentIndex));
+                fragmentTransaction.add(R.id.fragment_replace, fragment1);
 
             }
 

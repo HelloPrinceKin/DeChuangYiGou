@@ -7,11 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.dechuangyigou.dechuangyigou.BaseFragment;
+
 /**
  * Created by Administrator on 2017/2/18.
  */
 
-public class MeFragment extends Fragment {
+public class MeFragment extends BaseFragment {
     //初始化fragment时使用
     @Override
     public void onCreate(Bundle savedInstanceState) {

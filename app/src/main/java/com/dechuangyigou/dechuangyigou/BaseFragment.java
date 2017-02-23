@@ -11,11 +11,11 @@ import android.support.v4.app.FragmentActivity;
 
 public class BaseFragment extends Fragment {
 
-    private MainActivity activity;
+    public BaseActivity activity;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        activity = (MainActivity) getActivity();
+        activity = (BaseActivity) getActivity();//所有Fragment的上下文对象
     }
 }

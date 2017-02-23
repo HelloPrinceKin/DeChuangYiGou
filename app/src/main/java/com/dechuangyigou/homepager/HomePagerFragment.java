@@ -22,16 +22,9 @@ import java.util.List;
  */
 
 public class HomePagerFragment extends BaseFragment {
-    private Context context;
+
     private ListView mListView;
     private Toolbar mToorbar;
-
-    public static HomePagerFragment instance (Context context){
-        HomePagerFragment homePFragment = new HomePagerFragment();
-        homePFragment.context = context;
-        return homePFragment;
-
-    }
 
     //初始化fragment时使用
     @Override
